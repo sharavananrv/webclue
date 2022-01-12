@@ -82,6 +82,7 @@ export const updateCartAmount = (uid, productId, amount) => (dispatch) => {
     axios
         .post('/api/ecommerce/update-cart-amount', { uid, productId, amount })
         .then((res) => {
+            console.log(res)
             dispatch({
                 type: UPDATE_CART_AMOUNT,
                 payload: res.data,

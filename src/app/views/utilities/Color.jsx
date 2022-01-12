@@ -1,8 +1,22 @@
 import React from 'react'
 import { Breadcrumb, SimpleCard } from 'app/components'
 import { Grid } from '@material-ui/core'
+import { useDispatch, useSelector } from 'react-redux'
+
 
 const Color = () => {
+    // const { cartList_ } = useSelector((state) => state.notifications)
+    const notifcationList = useSelector((state) => state.notifications)
+
+    const { cartList } = useSelector((state) => state.ecommerce)
+
+    let navigation = useSelector(({ navigations }) => navigations)
+
+    console.log("cart list")
+    console.log(notifcationList)
+    console.log(cartList)
+    console.log(navigation)
+
     const bgClassList = [
         {
             bgClass: 'bg-primary',

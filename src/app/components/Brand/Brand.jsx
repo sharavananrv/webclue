@@ -31,17 +31,17 @@ const Brand = ({ children }) => {
                         [classes.hideOnCompact]: mode === 'compact',
                     })}
                 >
-                    Matx
+                    Webclue
                 </span>
             </div>
-            <div
+            {/* <div
                 className={clsx({
                     sidenavHoverShow: true,
                     [classes.hideOnCompact]: mode === 'compact',
                 })}
             >
                 {children || null}
-            </div>
+            </div> */}
         </div>
     )
 }

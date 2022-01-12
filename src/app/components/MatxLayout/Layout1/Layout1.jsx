@@ -54,7 +54,7 @@ const Layout1 = () => {
         }
     }
 
-    const sidenavWidth = getSidenavWidth()
+    const sidenavWidth = '0px'
     let classes = useStyles({ width: sidenavWidth, secondarySidebar })
     const theme = useTheme()
     const isMdScreen = useMediaQuery(theme.breakpoints.down('md'))
@@ -76,11 +76,11 @@ const Layout1 = () => {
 
     return (
         <div className={clsx('bg-default', layoutClasses)}>
-            {showSidenav && sidenavMode !== 'close' && (
+            {/* {showSidenav && sidenavMode !== 'close' && (
                 <SidenavTheme>
                     <Layout1Sidenav />
                 </SidenavTheme>
-            )}
+            )} */}
 
             <div
                 className={clsx(
@@ -122,15 +122,10 @@ const Layout1 = () => {
                         <div className="relative flex-grow">
                             <MatxSuspense>{renderRoutes(routes)}</MatxSuspense>
                         </div>
-                        {settings.footer.show && !settings.footer.fixed && (
-                            <Footer />
-                        )}
                     </div>
                 )}
 
-                {settings.footer.show && settings.footer.fixed && <Footer />}
             </div>
-            {settings.secondarySidebar.show && <SecondarySidebar />}
         </div>
     )
 }

@@ -59,6 +59,10 @@ const EcommerceReducer = function (state = initialState, action) {
             }
         }
         case UPDATE_CART_AMOUNT: {
+            console.log("reducer")
+            console.log(...action.payload)
+            console.log(state.cartList)
+
             return {
                 ...state,
                 cartList: [...action.payload],

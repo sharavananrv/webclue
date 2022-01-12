@@ -40,6 +40,10 @@ function ShoppingCart({ container }) {
     const history = useHistory()
     const { user } = useAuth()
     const { cartList } = useSelector((state) => state.ecommerce)
+    const { cartList_ } = useSelector((state) => state)
+    console.log("shopping cart")
+    console.log(cartList_)
+
     const { settings } = useSettings()
 
     if (!cartListLoaded) {
@@ -106,7 +110,7 @@ function ShoppingCart({ container }) {
                                             size="small"
                                             onClick={() =>
                                                 dispatch(
-                                                    updateCartAmount(
+                                                    updateCartAmount( 
                                                         user.id,
                                                         product.id,
                                                         product.amount + 1
